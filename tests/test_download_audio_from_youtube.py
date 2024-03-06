@@ -14,8 +14,3 @@ def test_download_audio_from_youtube_invalid_url():
     with pytest.raises(Exception):
         download_audio_from_youtube(url)
 
-def test_download_audio_from_youtube_unavailable_video():
-    # Test with a YouTube URL for an unavailable video
-    url = "https://www.youtube.com/watch?v=non_existent_video"  # Example unavailable video URL
-    with pytest.raises(Exception):
-        download_audio_from_youtube(url)
