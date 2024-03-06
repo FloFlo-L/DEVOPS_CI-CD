@@ -8,9 +8,9 @@ jobs:
     steps:
       - checkout
 
-      - run:
-          name: Install Dependencies
-          command: pip install -r requirements.txt
+      # - run:
+      #     name: Install Dependencies
+      #     command: pip install -r requirements.txt
 
       - run:
           name: test
@@ -19,6 +19,7 @@ jobs:
       - run:
           name: Run Tests
           command: pytest --cov
+          wording_directory: ~/DEVOPS_CI-CD 
 
 workflows:
   version: 2
