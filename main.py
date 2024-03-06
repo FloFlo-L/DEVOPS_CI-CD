@@ -5,15 +5,13 @@ import os
 import ssl
 from googletrans import Translator, LANGUAGES
 
-api_key = 'AIzaSyBserMzRBI--CPUQBg0hU5nVkIO81mwPFU'
-
 app = FastAPI()
 
 def download_audio_from_youtube(url: str) -> str:
     ssl._create_default_https_context = ssl._create_unverified_context  # Désactiver la vérification SSL
     yt = YouTube(url)
     audio_stream = yt.streams.filter(only_audio=True).first()
-    audio_file = audio_stream.download(filename="temp_audio")
+    audio_file = audio_stream.download(filename="temp_audio.mp3")
     return audio_file
 
 # Fonction pour transcrire l'audio en texte avec Whisper
