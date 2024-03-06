@@ -17,7 +17,7 @@ def download_audio_from_youtube(url: str) -> str:
 
 # Fonction pour transcrire l'audio en texte avec Whisper
 def transcribe_audio(audio_file: str) -> str:
-    model = whisper.load_model("medium")
+    model = whisper.load_model("base")
     result = model.transcribe(audio_file)
     os.remove(audio_file)  # Supprimer le fichier audio temporaire
     return result['text']  # Texte transcrit de l'audio
