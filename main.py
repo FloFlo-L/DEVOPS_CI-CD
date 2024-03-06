@@ -5,7 +5,6 @@ import os
 import ssl
 from googletrans import Translator, LANGUAGES
 
-api_key = 'AIzaSyBserMzRBI--CPUQBg0hU5nVkIO81mwPFU'
 
 app = FastAPI()
 
