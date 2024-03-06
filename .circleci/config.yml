@@ -13,6 +13,10 @@ jobs:
           command: pip install -r requirements.txt
 
       - run:
+          name: test
+          command: ls
+
+      - run:
           name: Run Tests
           command: pytest --cov
 
