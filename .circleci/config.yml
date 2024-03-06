@@ -13,13 +13,8 @@ jobs:
           command: pip install -r requirements.txt
 
       - run:
-          name: test
-          command: ls
-
-      - run:
           name: Run Tests
           command: pytest --cov
-          wording_directory: ~/DEVOPS_CI-CD 
 
 workflows:
   version: 2
