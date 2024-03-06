@@ -1,7 +1,16 @@
+# test_main.py
+import pytest
 from main import translate_text
 
-def test_translate_text():
-    # Test de la fonction de traduction avec un texte donné
-    text = "Ceci est un texte de test"
-    target_language = "en"  # Langue cible (anglais)
-    translated_text = translate_text(text, target_language)
+@pytest.mark.parametrize("input_text, target_lang, expected", [
+    ("Bonjour", "en", "Hello"),
+    ("Hello", "fr", "Bonjour"),
+])
+
+def test_translate_text(input_text, target_lang, expected, mocker):
+    mock_translate = mocker.patch('googletrans.Translator.translate')
+    mock_translate.return_value = type('Translate', (object,), {'text': expected})()
+
+    result = translate_text(input_text, target_lang)
+    assert result == expected
+    mock_translate.assert_called_once()
