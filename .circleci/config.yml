@@ -8,9 +8,9 @@ jobs:
     steps:
       - checkout
 
-      # - run:
-      #     name: Install Dependencies
-      #     command: pip install -r requirements.txt
+      - run:
+          name: Install Dependencies
+          command: pip install -r requirements.txt
 
       - run:
           name: test
