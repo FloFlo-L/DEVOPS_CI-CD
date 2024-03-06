@@ -9,12 +9,12 @@ jobs:
       - checkout
 
       - run:
-        name: Install Dependencies
-        command: pip install -r requirements.txt
+          name: Install Dependencies
+          command: pip install -r requirements.txt
 
       - run:
-        name: Run Tests
-        command: pytest
+          name: Run Tests
+          command: pytest
 
 workflows:
   version: 2
