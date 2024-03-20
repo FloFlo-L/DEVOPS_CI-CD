@@ -1,5 +1,5 @@
 import pytest
-from main import download_audio_from_youtube
+from services.youtube import download_audio_from_youtube
 
 def test_download_audio():
     # Test with a valid YouTube URL
