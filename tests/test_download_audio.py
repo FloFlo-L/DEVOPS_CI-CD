@@ -12,7 +12,6 @@ def test_download_audio_from_youtube_invalid_url():
     with pytest.raises(Exception):
         download_audio_from_youtube(url)
 
-
 def test_download_audio_from_youtube_no_audio_stream():
     # Test with a YouTube URL without an audio stream
     url = "https://www.youtube.com/watch?v=X1xwRRj3sJo"  # Example URL without audio stream
