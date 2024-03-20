@@ -6,6 +6,10 @@ app = FastAPI()
 
 app.include_router(router)
 
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],

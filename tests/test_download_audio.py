@@ -1,4 +1,5 @@
 import pytest
+import os
 from services.youtube import download_audio_from_youtube
 
 def test_download_audio():
@@ -23,3 +24,6 @@ def test_download_audio_from_youtube_empty_url():
     url = ""
     with pytest.raises(Exception):
         download_audio_from_youtube(url)
+
+def test_delete_files():
+    os.remove("temp_audio.mp4")
