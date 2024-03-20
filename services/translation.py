@@ -1,6 +1,5 @@
-from googletrans import Translator
+from translate import Translator
 
 def translate_text(text: str, lang: str) -> str:
-    translator = Translator()
-    translated_text = translator.translate(text, dest=lang).text
-    return translated_text
+    translator = Translator(to_lang=lang)
+    return translator.translate(text)
