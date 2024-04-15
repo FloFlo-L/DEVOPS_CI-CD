@@ -5,6 +5,7 @@ chardet==3.0.4
 charset-normalizer==3.3.2
 click==8.1.7
 coverage==7.4.4
+deepl==1.17.0
 fastapi==0.110.0
 filelock==3.13.1
 flake8==7.0.0
@@ -40,6 +41,7 @@ pyflakes==3.2.0
 pytest==8.1.1
 pytest-cov==4.1.0
 pytest-mock==3.12.0
+python-dotenv==1.0.1
 pytube==15.0.0
 regex==2023.12.25
 requests==2.31.0
