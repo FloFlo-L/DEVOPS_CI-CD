@@ -2,10 +2,8 @@ import deepl
 from dotenv import load_dotenv
 import os
 
-# Charge les variables d'environnement du fichier .env
 load_dotenv()
 
-# Récupère la clé API de l'environnement
 auth_key = os.getenv("API_DEEPL")
 translator = deepl.Translator(auth_key)
 
